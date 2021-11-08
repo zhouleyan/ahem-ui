@@ -1,0 +1,10 @@
+{
+  "name": "@ahem-types/shared",
+  "version": "1.0.0",
+  "description": "Ahem-UI components in React",
+  "types": "src/index.d.ts",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.2"
+  }
+}

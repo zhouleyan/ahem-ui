@@ -1,3 +1,12 @@
+.DS_Store
+build-storybook.log
+test-reports.xml
+junit.xml
+.idea
+.parcel-cache
+public
+storybook-static
+
 # Logs
 logs
 *.log

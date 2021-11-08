@@ -1,0 +1,13 @@
+{
+  "name": "@ahem/components",
+  "version": "1.0.0",
+  "description": "Ahem-UI components in React",
+  "main": "index.js",
+  "repository": "https://github.com/zhouleyan/ahem-ui.git",
+  "author": "zhouleyan",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@ahem-types/shared": "^1.0.0"
+  }
+}

@@ -12,6 +12,45 @@ module.exports = {
       'legacyDecorators': true
     }
   },
+  overrides: [
+    {
+      files: ['packages/**/*.ts', 'packages/**/*.tsx'],
+      plugins: ['react', 'jsx-a11y', 'react-hooks', 'jest', '@typescript-eslint', 'monorepo', 'jsdoc'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        ecmaFeatures: {
+          'jsx': true,
+          'legacyDecorators': true
+        },
+        'useJSXTextNode': true,
+        'project': './tsconfig.json',
+        sourceType: 'module'
+      },
+      rules: {
+        'jsdoc/require-description-complete-sentence': [ERROR, { abbreviations: ['e.g', 'etc'] }],
+        'jsdoc/check-alignment': ERROR,
+        'jsdoc/check-indentation': ERROR,
+        'jsdoc/check-tag-names': ERROR,
+        // enable this rule to see literally everything missing jsdocs, this rule needs some refinement but is good as a sanity check.
+        // 'jsdoc/require-jsdoc': [ERROR, {contexts:['TSInterfaceDeclaration TSPropertySignature', 'TSInterfaceDeclaration TSMethodSignature']}],
+        'jsdoc/require-description': [ERROR, { exemptedBy: ['deprecated'], checkConstructors: false }],
+        'no-redeclare': OFF,
+        '@typescript-eslint/no-redeclare': ERROR,
+        'no-unused-vars': OFF,
+        '@typescript-eslint/no-unused-vars': ERROR,
+        '@typescript-eslint/member-delimiter-style': [ERROR, {
+          multiline: {
+            delimiter: 'comma',
+            requireLast: false
+          },
+          singleline: {
+            delimiter: 'comma',
+            requireLast: false
+          }
+        }]
+      }
+    }
+  ],
   env: {
     'browser': true,
     'node': true,
@@ -39,14 +78,14 @@ module.exports = {
   rules: {
     'comma-dangle': ERROR,
     'indent': OFF,
-    'indent-legacy': [ERROR, ERROR, {SwitchCase: 1}],
+    'indent-legacy': [ERROR, ERROR, { SwitchCase: 1 }],
     'quotes': [ERROR, 'single', 'avoid-escape'],
     'linebreak-style': [ERROR, 'unix'],
     'semi': [ERROR, 'always'],
-    'space-before-function-paren': [ERROR, {anonymous: 'always', named: 'never', asyncArrow: 'ignore'}],
-    'keyword-spacing': [ERROR, {after: true}],
+    'space-before-function-paren': [ERROR, { anonymous: 'always', named: 'never', asyncArrow: 'ignore' }],
+    'keyword-spacing': [ERROR, { after: true }],
     'jsx-quotes': [ERROR, 'prefer-double'],
-    'brace-style': [ERROR, '1tbs', {allowSingleLine: true}],
+    'brace-style': [ERROR, '1tbs', { allowSingleLine: true }],
     'object-curly-spacing': [ERROR, 'always'],
     'curly': ERROR,
     'no-fallthrough': OFF,
@@ -56,12 +95,12 @@ module.exports = {
     'eqeqeq': [ERROR, 'smart'],
     'no-spaced-func': ERROR,
     'array-bracket-spacing': [ERROR, 'never'],
-    'key-spacing': [ERROR, {beforeColon: false, afterColon: true}],
+    'key-spacing': [ERROR, { beforeColon: false, afterColon: true }],
     'no-console': OFF,
-    'no-unused-vars': [ERROR, {args: 'none', vars: 'all', varsIgnorePattern: '[rR]eact'}],
+    'no-unused-vars': [ERROR, { args: 'none', vars: 'all', varsIgnorePattern: '[rR]eact' }],
     'space-in-parens': [ERROR, 'never'],
-    'space-unary-ops': [ERROR, {words: true, nonwords: false}],
-    'spaced-comment': [ERROR, 'always', {exceptions: ['*'], markers: ['/']}],
+    'space-unary-ops': [ERROR, { words: true, nonwords: false }],
+    'spaced-comment': [ERROR, 'always', { exceptions: ['*'], markers: ['/'] }],
     'max-depth': [WARN, 4],
     'radix': [ERROR, 'always'],
     'react/jsx-uses-react': WARN,
@@ -96,7 +135,7 @@ module.exports = {
     'react/react-in-jsx-scope': ERROR,
     'react/require-extension': OFF,
     'react/jsx-equals-spacing': ERROR,
-    'react/jsx-max-props-per-line': [ERROR, {when: 'multiline'}],
+    'react/jsx-max-props-per-line': [ERROR, { when: 'multiline' }],
     'react/jsx-closing-bracket-location': [ERROR, 'after-props'],
     'react/jsx-tag-spacing': ERROR,
     'react/jsx-indent': [ERROR, 2],
@@ -216,6 +255,10 @@ module.exports = {
     'jsx-a11y/scope': ERROR,
     'jsx-a11y/tabindex-no-positive': ERROR,
 
+    // importing rules
+    'monorepo/no-internal-import': [
+      ERROR
+    ],
     'monorepo/no-relative-import': ERROR
   }
 };

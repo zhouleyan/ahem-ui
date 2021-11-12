@@ -1,0 +1,29 @@
+{
+  "name": "@ahem-components/{{ packageName }}",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ahem-UI components in React",
+  "license": "MIT",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "types": "dist/types.d.ts",
+  "source": "src/index.ts",
+  "files": ["dist", "src"],
+  "sideEffects": [
+    "*.css"
+  ],
+  "dependencies": {
+    {{#if (includes scopes "@ahem-types")}}
+    "@ahem-types/{{packageName}}": "1.0.0",
+    {{/if}}
+    "@ahem-types/shared": "^1.0.0"
+  },
+  "devDependencies": {
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

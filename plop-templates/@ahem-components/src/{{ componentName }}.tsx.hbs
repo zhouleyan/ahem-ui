@@ -1,0 +1,28 @@
+import React from 'react';
+{{#if (includes scopes "@ahem-types")}}
+import { DOMRef } from '@ahem-types/shared';
+{{else}}
+import { DOMProps, DOMRef, StyleProps } from '@react-types/shared';
+{{/if}}
+{{#if (includes scopes "@ahem-types")}}
+import { Ahem{{ componentName }}Props } from '@ahem-types/{{ packageName }}';
+{{/if}}
+
+{{#unless (includes scopes "@ahem-types")}}
+export interface Ahem{{ componentName }}Props extends DOMProps, StyleProps {
+  onChange?: any
+}
+{{/unless}}
+
+function {{ componentName }}(props: Ahem{{ componentName }}Props, ref: DOMRef<HTMLDivElement>) {
+
+  return (
+    <div>{{ componentName }}</div>
+  );
+}
+
+/**
+ * TODO: Add description of component here.
+ */
+const _{{ componentName }} = React.forwardRef({{ componentName }});
+export { _{{ componentName }} as {{ componentName ~}}  };

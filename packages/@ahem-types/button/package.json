@@ -1,5 +1,5 @@
 {
-  "name": "@ahem-types/{{ packageName }}",
+  "name": "@ahem-types/button",
   "version": "1.0.0",
   "private": true,
   "description": "Ahem-UI components in React",

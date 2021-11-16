@@ -1,5 +1,5 @@
 {
-  "name": "@ahem-components/{{ packageName }}",
+  "name": "@ahem-components/text",
   "version": "1.0.0",
   "private": true,
   "description": "Ahem-UI components in React",
@@ -13,10 +13,9 @@
     "*.css"
   ],
   "dependencies": {
-    {{#if (includes scopes "@ahem-types")}}
-    "@ahem-types/{{packageName}}": "1.0.0",
-    {{/if}}
-    "@ahem-types/shared": "^1.0.0"
+    "@ahem-types/text": "1.0.0",
+    "@ahem-types/shared": "^1.0.0",
+    "@ahem-components/utils": "^1.0.0"
   },
   "devDependencies": {
   },

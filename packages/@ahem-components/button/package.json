@@ -16,7 +16,10 @@
     "*.css"
   ],
   "dependencies": {
-    "@babel/runtime": "^7.16.3"
+    "@babel/runtime": "^7.16.3",
+    "@ahem-types/shared": "^1.0.0",
+    "@ahem-components/text": "^1.0.0",
+    "@ahem-components/utils": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^17.0.2"

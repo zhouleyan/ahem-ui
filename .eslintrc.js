@@ -14,7 +14,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['packages/**/*.ts', 'packages/**/*.tsx', 'stories/**/*.@(ts|tsx)'],
+      files: ['packages/**/*.@(ts|tsx)', 'stories/**/*.@(ts|tsx)'],
       plugins: ['react', 'jsx-a11y', 'react-hooks', 'jest', '@typescript-eslint', 'monorepo', 'jsdoc'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
@@ -27,7 +27,7 @@ module.exports = {
         sourceType: 'module'
       },
       rules: {
-        'jsdoc/require-description-complete-sentence': [ERROR, { abbreviations: ['e.g', 'etc'] }],
+        'jsdoc/require-description-complete-sentence': [ERROR, { abbreviations: ['e.g', 'etc'], tags: ['deprecated'] }],
         'jsdoc/check-alignment': ERROR,
         'jsdoc/check-indentation': ERROR,
         'jsdoc/check-tag-names': ERROR,
@@ -40,12 +40,12 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': ERROR,
         '@typescript-eslint/member-delimiter-style': [ERROR, {
           multiline: {
-            delimiter: 'comma',
-            requireLast: false
+            delimiter: 'semi',
+            requireLast: true
           },
           singleline: {
-            delimiter: 'comma',
-            requireLast: false
+            delimiter: 'semi',
+            requireLast: true
           }
         }]
       }

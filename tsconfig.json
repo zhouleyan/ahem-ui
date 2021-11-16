@@ -34,7 +34,8 @@
     "skipLibCheck": false
   },
   "include": [
-    "packages"
+    "packages",
+    "stories"
   ],
   "exclude": [
     "**/node_modules"

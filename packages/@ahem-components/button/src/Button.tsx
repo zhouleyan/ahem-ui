@@ -2,8 +2,16 @@ function Button(props: string): string {
   return 'Button';
 }
 
-class Circle {
+class Bork {
+  // Property initializer syntax
+  instanceProperty = 'bork';
+  boundFunction = () => this.instanceProperty;
 
+  // Static class properties
+  static staticProperty = 'babelIsCool';
+  static staticFunction = function () {
+    return Bork.staticProperty;
+  };
 }
 
-export { Button, Circle };
+export { Button, Bork };

@@ -4,7 +4,7 @@ SHELL := /bin/bash
 PATH := ./node_modules/.bin:$(PATH)
 
 build:
-	parcel build packages/components/* --no-optimize
+	parcel build packages/@ahem-components/* --no-optimize
 
 #build:
 #	parcel build button --no-optimize

@@ -14,7 +14,7 @@
     "edge >= 16"
   ],
   "scripts": {
-    "build-comp": "cross-env NODE_ENV=components parcel build packages/components/* --no-optimize"
+    "build-comp": "cross-env NODE_ENV=components parcel build packages/@ahem-components/* --no-optimize"
   },
   "workspaces": [
     "packages/*/*",

@@ -1,5 +1,5 @@
 {
-  "name": "@ahem-types/{{ packageName }}",
+  "name": "@ahem-types/button",
   "version": "1.0.0",
   "private": true,
   "description": "Ahem-UI components in React",
@@ -9,7 +9,7 @@
     "@ahem-types/shared": "^1.0.0"
   },
   "peerDependencies": {
-    "react": "^17.0.2"
+    "react": "^16.8.0 || ^17.0.2"
   },
   "publishConfig": {
     "access": "public"

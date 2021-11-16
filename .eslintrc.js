@@ -14,7 +14,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['packages/**/*.ts', 'packages/**/*.tsx', 'stories/**/*.@(ts|tsx)'],
+      files: ['packages/**/*.@(ts|tsx)', 'stories/**/*.@(ts|tsx)'],
       plugins: ['react', 'jsx-a11y', 'react-hooks', 'jest', '@typescript-eslint', 'monorepo', 'jsdoc'],
       parser: '@typescript-eslint/parser',
       parserOptions: {

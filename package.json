@@ -16,7 +16,8 @@
   "scripts": {
     "build-comp": "cross-env NODE_ENV=components parcel build packages/@ahem-components/* --no-optimize",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "plop": "plop --plopfile scripts/plopfile.js"
   },
   "workspaces": [
     "packages/*/*",
@@ -58,6 +59,7 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "lerna": "^4.0.0",
     "parcel": "^2.0.1",
+    "plop": "^2.7.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "typescript": "^4.4.4"

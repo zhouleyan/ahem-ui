@@ -1,0 +1,21 @@
+{
+  "name": "@ahem/button",
+  "version": "1.0.0",
+  "description": "Ahem-UI",
+  "author": "zhouleyan",
+  "license": "MIT",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "types": "dist/types.d.ts",
+  "source": "src/index.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "dependencies": {
+    "@babel/runtime": "^7.16.3"
+  }
+}

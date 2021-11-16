@@ -1,0 +1,28 @@
+{
+  "env": {
+    "components": {
+      "plugins": [
+        [
+          "@parcel/babel-plugin-transform-runtime",
+          {
+            "version": "^7.16.0"
+          }
+        ]
+      ]
+    }
+  },
+  "plugins": [
+    [
+      "@babel/plugin-proposal-class-properties",
+      {
+        "legacy": true
+      }
+    ],
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-export-namespace-from",
+    "@babel/plugin-syntax-class-properties",
+    "transform-glob-import",
+    "babel-plugin-macros"
+  ],
+  "sourceType": "unambiguous"
+}

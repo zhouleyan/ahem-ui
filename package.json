@@ -1,0 +1,53 @@
+{
+  "name": "ahem-ui",
+  "version": "1.0.0",
+  "description": "Ahem-UI",
+  "main": "index.js",
+  "repository": "https://github.com/zhouleyan/ahem-ui.git",
+  "author": "zhouleyan",
+  "license": "MIT",
+  "private": true,
+  "browserslist": [
+    "chrome >= 61",
+    "firefox >= 60",
+    "safari >= 11",
+    "edge >= 16"
+  ],
+  "scripts": {
+    "build-comp": "cross-env NODE_ENV=components parcel build packages/components/* --no-optimize"
+  },
+  "workspaces": [
+    "packages/*/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.16.3",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/plugin-proposal-decorators": "^7.16.0",
+    "@babel/plugin-proposal-export-default-from": "^7.16.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.16.0",
+    "@babel/plugin-syntax-class-properties": "^7.12.13",
+    "@parcel/babel-plugin-transform-runtime": "^2.0.1",
+    "@parcel/babel-preset-env": "^2.0.1",
+    "@parcel/packager-ts": "^2.0.1",
+    "@parcel/transformer-typescript-types": "^2.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "babel-plugin-macros": "^3.1.0",
+    "babel-plugin-react-remove-properties": "^0.3.0",
+    "babel-plugin-transform-glob-import": "^1.0.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.2.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jest": "^25.2.4",
+    "eslint-plugin-jsdoc": "^37.0.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-monorepo": "^0.3.2",
+    "eslint-plugin-react": "^7.27.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "lerna": "^4.0.0",
+    "parcel": "^2.0.1",
+    "typescript": "^4.4.4"
+  }
+}

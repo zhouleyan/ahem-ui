@@ -4,14 +4,17 @@ import React, { ElementType, ReactElement } from 'react';
 import { useFocusableRef } from '@ahem-components/utils';
 import { Text } from '@ahem-components/text';
 
+import './index.less';
+
 function Button<T extends ElementType = 'button'>(props: AhemButtonProps<T>, ref: FocusableRef<HTMLElement>) {
   let {
     elementType: ElementType = 'button',
-    children
+    children,
+    ...otherProps
   } = props;
   const domRef = useFocusableRef(ref);
   return (
-    <ElementType ref={domRef}>
+    <ElementType className="ahem-button" ref={domRef} {...otherProps}>
       {typeof children === 'string'
         ? <Text>{children}</Text>
         : children}
